@@ -1,0 +1,46 @@
+/**********************************
+
+Name: form-signin Styles
+
+***********************************/
+form.form-signin {
+/*	width: 370px;*/
+	font-size: 1.0em;
+	color: #333;
+}
+.error-block{ color:red!important;}
+form.form-signin legend {
+	padding-left: 0;
+}
+form.form-signin .form-group{ margin-top:15px;}
+form.form-signin legend, form.form-signin label {
+	color: #333;
+}
+
+form.form-signin fieldset {
+	border: none;
+	border-top: 1px solid #C9DCA6;
+	background: url(../images/form-signin-fieldset.gif) left bottom repeat-x;
+	background-color: #F8FDEF;
+}
+
+form.form-signin fieldset fieldset {
+	background: none;
+}
+
+form.form-signin fieldset p, form.form-signin fieldset fieldset {
+	padding: 5px 10px 7px;
+	background: url(../images/form-signin-divider.gif) left bottom repeat-x;
+}
+
+form.form-signin label.error, label.error {
+	/* remove the next line when you have trouble in IE6 with labels in list */
+	color: red;
+	font-style: italic
+}
+div.error { display: none; }
+input {	border: 1px solid black; }
+input.checkbox { border: none }
+input:focus { border: 1px dotted black; }
+input.error { border: 1px dotted red; }
+form.form-signin .gray * { color: gray; }

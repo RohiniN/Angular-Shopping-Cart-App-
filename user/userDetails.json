@@ -1,0 +1,19 @@
+[ {
+			"userName" : "John",
+			"email" : "john@gmail.com"
+			
+		},
+		{
+			"userName" : "Penny",
+			"email" : "Penny@gmail.com",
+			"active" : true
+			
+		}
+		,
+		{
+			"userName" : "Yuko",
+			"email" : "Yuko@gmail.com"
+			
+		}
+	
+]

@@ -1,0 +1,77 @@
+/* CSS Document */
+
+.sidebar{ margin:30px;}
+.thumbnail{ height:350px; overflow:hidden;}
+.thumbnail p{    text-overflow: ellipsis;  overflow:hidden;white-space:nowrap; height:2.4em;}
+.phone-images {
+  background-color: white;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+.padding-10{ padding:10px;}
+.form-signin {
+    margin: 0 auto;
+    max-width: 530px;
+    padding: 15px;
+}
+img.phone {
+  float: left;
+  margin-right: 3em;
+  margin-bottom: 2em;
+  background-color: white;
+  padding: 2em;
+  height: 400px;
+  width: 400px;
+  display: none;
+}
+
+ .phone-images li{
+  float:left; display:inline-block; height:400px;
+  width: 400px; overflow:hidden;
+  }
+  	
+img.phone, .phone-images li{
+  float:left; display:inline-block;
+  }
+  
+ .has-error .form-control-feedback {
+    color: #a94442;
+}   
+  ul.phone-thumbs img {
+    height: 100px;
+    padding: 1em;
+    width: 100px;
+}
+ ul.phone-thumbs li{ float:left; list-style-type:none; border:1px solid black; margin:10px; cursor:pointer;}
+ ul.phone-thumbs , .specs {
+  display: block; clear:both;
+  }
+.has-success .form-control {
+    border-color: #3c763d;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media > .pull-left {
+    padding-right: 10px;
+}
+.media-body {
+    width: 10000px;
+}
+.media{ border-bottom:1px dashed grey; padding:10px 0; margin:15px 0!important;}
+.panel-default > .panel-heading {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #333;
+}
+.panel-heading {
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+}

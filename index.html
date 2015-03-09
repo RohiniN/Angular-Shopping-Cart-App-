@@ -1,0 +1,108 @@
+<!doctype html>
+<html ng-app="phonecatApp">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone APP</title>
+<link href="styles/myAppStyles.css" rel="stylesheet">
+<link href="styles/animations.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/angular/angular.js"></script>
+<script src="js/angular/angular-animate.js"></script>
+<!--<script src="js/animate.js"></script>-->
+<script src="js/bootstrapp/dist/js/bootstrap-modal.js"></script>
+<script src="js/phoneApp.js"></script>
+<script src="js/bootstrapp/dist/js/bootstrap.min.js"></script>
+
+<link  href="js/bootstrapp/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .animate {
+ -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;/**/
+  z-index: 99;
+  left: -312px;
+  position:absolute;	
+   opacity: 0;
+	top:0px;
+  overflow: hidden;
+    }
+     
+    .animate-enter-active {
+-webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+	position:absolute;
+	top:0px;
+  z-index: 100;
+  left:49px;
+    opacity: 1;
+    }
+</style>
+</head>
+
+<body ng-controller="PhoneListCtrl">
+
+<h1> List of Phones</h1>
+<!--
+<div ng-repeat="phone in phones" class="">{{ phone.name}}	</div>
+-->
+<div class="row">
+
+  <div class="col-sm-3 col-md-2 sidebar"> <!--Sidebar content-->
+    <div style="margin-bottom:30px;">
+      <label> Search: </label>
+      <input ng-model="query">
+      <BR>
+      <BR>
+      <label> Sort by:</label>
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+        <option value="-age">Oldest</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="col-sm-6 col-md-4"  ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+      <div class="thumbnail" >
+      <form action="register.html" class="myform">	
+      <a href="#"  data-toggle="modal" ng-click="loadURL($event)" data-target="#myModal">
+      
+       <img src="{{phone.imageUrl}}" class="myImage" id="{{phone.id}}"  width="150" height="100"></a>
+        <div class="caption">
+          <h3>{{ phone.name}}</h3>
+          <p>{{ phone.snippet}}</p>
+          <p>{{ phone.age}}</p>
+          <div><!--<a  href="#"  class="btn btn-primary" ng-click="$('.myform').submit()" role="submit">Buy Now</a>-->
+         <button type="submit" class="btn btn-primary">Buy Now</button>
+
+</div>
+        </div>
+      </form>
+    </div>
+     <!-- Modal HTML -->
+    
+<!----> 
+  </div>
+</div>
+<div id="myModal" class="modal fade" >
+        <div class="modal-dialog">
+            <div class="modal-content" ng-include="' partials/phone-detail.html ' ">
+                <!-- Content will be loaded here from "remote.php" file -->
+            </div>
+        </div>
+    </div>
+
+<script>
+	 /* $(function(){
+		  <form action="register.html">
+		 $('.myImage').modal() 
+		  })*/
+	  </script>
+</body>
+</html>

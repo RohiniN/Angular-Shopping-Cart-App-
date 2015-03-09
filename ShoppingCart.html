@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app="shopCartApp">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone APP - Shopping Cart Page</title>
+<link href="styles/myAppStyles.css" rel="stylesheet">
+<link href="styles/cmxform.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/angular/angular.js"></script>
+<script src="js/angular/angular-animate.js"></script>
+<script src="js/jquery-validation-1.13.1/dist/jquery.validate.js"></script>
+<script src="js/jquery-validation-1.13.1/src/additional/lettersonly.js"></script>
+<script src="js/shopCart.js"></script>
+<script src="js/bootstrapp/dist/js/bootstrap.min.js"></script>
+<link  href="js/bootstrapp/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="SelItemListCtrl">
+
+<!--
+<div ng-repeat="phone in phones" class="">{{ phone.name}}	</div>
+-->
+<div class="row">
+  <h1  class="col-md-offset-1">Your Shopping Cart</h1>
+  <div class="col-sm-7 blog-main col-md-offset-1">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Selected Items</h3>
+      </div>
+      <div class="panel-body">
+        <div class="media"  ng-repeat="phone in phones" >
+          <div class="media-left media-middle"> <a href="#"> <img class="media-object" src="{{phone.imageUrl}}"  width="75" height="75"> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{ phone.name}}</h4>
+            <p>{{ phone.snippet}}</p>
+               <a href="#" class="pull-right" ng-click="removeItem($index,phone.id)" STYLE="MARGIN-LEFT:20PX">REMOVE ITEM</a> <a href="#" class="pull-right" ng-click="removeItem($index,phone.id,$event)">ADD TO WISH LIST</a>  &nbsp; &nbsp; &nbsp;
+          </div>
+        </div>
+        <p ng-show="isCartEmpty" >Your Shopping Cart is empty!</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-2  blog-sidebar">
+    <div class="panel panel-default"  >
+      <div class="panel-heading">Your Details</div>
+      <div class="panel-body"> 
+      <p><b>User Name :</b> {{CurrUser}}</p>
+      	<p><b>Email :</b> {{email}}</p>
+      
+       </div>
+    </div>
+    <div class="panel panel-default"  >
+      <div class="panel-heading">Your Wishlist Updated</div>
+      <div class="panel-body"> 
+     <div class="media"  ng-repeat="items in wishlist" >
+          <div class="media-left media-middle"> <a href="#"> <img class="media-object" src="{{items.imageUrl}}"  width="75" height="75"> </a> </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{ items.name}}</h4>
+            <p>{{ items	.snippet}}</p>
+               <a href="#" class="pull-right" ng-click="removeItemWhishList($index,items.id)" STYLE="MARGIN-LEFT:20PX">REMOVE ITEM</a> <a href="#" class="pull-right" ng-click="AddToShCart($index,items.id)">ADD TO SHOPPING  CART</a>  &nbsp; &nbsp; &nbsp;
+          </div>
+        </div>
+          <p ng-show="isWishListEmpty" >Your Wish List is empty!</p>
+      </div>
+       </div>
+    </div>
+  </div>
+</div>
+<script>
+	 /* $(function(){
+		  
+		 $('.myImage').modal() 
+		  })*/
+	  </script>
+</body>
+</html>
