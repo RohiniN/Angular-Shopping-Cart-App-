@@ -1,0 +1,68 @@
+<!doctype html>
+<html ng-app="phonecatApp">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phone APP - Register Page</title>
+<link href="styles/myAppStyles.css" rel="stylesheet">
+<link href="styles/cmxform.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/angular/angular.js"></script>
+<script src="js/angular/angular-animate.js"></script>
+<script src="js/jquery-validation-1.13.1/dist/jquery.validate.js"></script>
+<script src="js/jquery-validation-1.13.1/src/additional/lettersonly.js"></script>
+
+<script src="js/phoneApp.js"></script>
+<script src="js/bootstrapp/dist/js/bootstrap.min.js"></script>
+<link  href="js/bootstrapp/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="RegisterController">
+
+<!--
+<div ng-repeat="phone in phones" class="">{{ phone.name}}	</div>
+-->
+<div class="row">
+  <div class="col-sm-8 blog-main ">
+ 
+    <form class="padding-10 form-signin" id="userRegistration" ng-submit="registerUser($event);" action="ShoppingCart.html" >
+     <h1> New User Registration</h1>
+      <div class="form-group">
+        <label for="userName">User Name</label>
+        <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter User Name" ng-blur="compareExistingUsers($event)" >
+         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+      </div
+      ><div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>        <input type="password" class="form-control" id="exampleInputPassword1" name="exampleInputPassword1" placeholder="Password">
+
+      </div>
+       <div class="form-group">
+        <label for="ConfirmInputPassword1">Confirm Password</label>        <input type="password" class="form-control" name="ConfirmInputPassword1" id="ConfirmInputPassword1" placeholder="Password">
+
+      </div>      
+      <div class="checkbox">
+        <label>
+          <input type="checkbox">
+          Check me out </label>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+  <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+  
+   </div>
+</div>
+<script>
+	 /* $(function(){
+		  
+		 $('.myImage').modal() 
+		  })*/
+	  </script>
+</body>
+</html>
